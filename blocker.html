@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Website Blocker</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/1907/1907769.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/vs.min.css">
+    <style>
+    </style>
+  </head>
+  
+  <body class="px-5 pb-5 text-white" style="background-color:#000100;">
+    <nav class="navbar navbar-expand-lg navbar-dark mb-5 pb-5" style="background-color: transparent;">
+      <div class="container py-4 my-2 ">
+        <div class=" d-flex justify-content-center">
+          <a style="width:150px;" href="" class="navbar-brand fs-2 fw-bold text-white"><img src="images/logo.gif" alt="" width="64px" height="64px"></a>
+        </div>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger" id="hamburger-6">
+            <span class="sub"></span>
+            <span class="sub"></span>
+            <span class="sub"></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+          <div class="navbar-nav text-center">
+            <li class="nav-item " style="background-color: transparent!important;">           
+              <a class="nav-link mx-4 fw-bold" href="index.html" >
+                Home
+              </a>
+            </li>
+            <li class="nav-item " style="background-color: transparent!important;">           
+              <a class="nav-link mx-4 fw-bold" href="statistics.html" >
+                Statistics
+              </a>
+            </li>
+            <li class="nav-item " style="background-color: transparent!important;">
+              <a class="nav-link mx-4 fw-bold" href="helpline.html" >
+                Helpline
+              </a>
+            </li>
+            <li class="nav-item " style="background-color: transparent!important;">
+              <a class="nav-link mx-4 fw-bold" href="blocker.html" >
+                Blocker
+              </a>
+            </li>
+            <li class="nav-item " style="background-color: transparent!important;">
+              <a class="nav-link mx-4 fw-bold" href="survey.html" >
+                Survey
+              </a>
+            </li>
+          </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="gradient"></div>
+    <div class="gradient2"></div>
+    <div class="gradient3"></div>
+    <div class="gradient4"></div>
+    <div class="container-fluid mx-0 px-0 text-white d-flex align-items-center" style="min-height: 70vh;">
+      <div class="container-fluid ">
+        <div class="container  ">
+          <div class=" text-center ">
+            <h2 class="title">
+              Blocking
+              <span class="title slider p-0 m-0" id="1">Crave</span>
+              <span class="title slider p-0 m-0 visually-hidden" id="2">Dependency</span>
+              <span class="title slider p-0 m-0 visually-hidden" id="3">Habits</span>
+            </h2>
+            <h3 style="font-size: 48px;">Intuitive Prevention</h3>
+            <a href="#started" class="btn btn-primary px-5 py-2 mt-3 rounded-pill"> Initiate </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-5 text-white" id="started">
+    <div class="container my-5 p-5 rounded-5" style="background-color: rgba(28,28,29,.5);">
+      <div class="tile row my-5 p-5">
+        <div class="col-6 d-flex justify-content-start align-items-center pe-5">
+          <div>
+            <div class="animate-gradient-text mb-3 fw-light"><h2>
+              GitHub</h2></div>
+            <p class="text-white">Access the GitHub link below to access direct code in the its proper format.</p>
+            <a target="_blank" href="https://github.com/aryankalra/Website-Blocker/blob/main/websiteblocker.py" class="gbtn1 btn rounded-1 w-50"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Emblem.png" width="40%"  alt=""></a>
+          </div>
+        </div>
+        <div class="col-6  p-5 rounded-5">
+          <img class="rounded-5" width="100%" height="100%" src="https://designshack.net/wp-content/uploads/placeholder-image.png" alt="">
+        </div>
+      </div>
+    </div>
+      <style>
+      </style>
+      <div class="container">
+        <h2 style="color: white;">Website Blocker Code</h2>
+      <h6 style="color: white;">Coded in Python, you can download the file to the code in the upper right hand corner!</h6>
+      <div class="bg-gradient2 p-5 rounded-5 mt-5">
+        <div class="container p-5 rounded-5 bg-dark" >
+          <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2"><button class="w-100 btn-primary btn" data-for="1" onclick="download(this)">Download</button></div>
+          </div>
+          <pre>
+            <code class="w-100 h-100 text-white bg-dark font-size: 500px font-family: Menlo, Consolas, Monaco, monospace;">
+  import time
+  from datetime import datetime as dt # utilising dt to refer the code easily
+  
+  hosts_path = "/etc/hosts" # set host according to user operating system
+  redirect = "127.0.0.1" # redirect to the localhost's machine/IP - defaults to 127.0.0.1
+  
+  websites = ["www.sportsbet.com.au", "sportsbet.com.au"]     # list of websites able to be blocked through modification
+  
+  while True:
+      if dt(dt.now().year, dt.now().month, dt.now().day,16) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day,8): 
+      # set time to dictate the period of time to block and unblock websites
+          print("Blocking Specified Websites") # printed output viewed in terminal displaying the blocking method
+          with open(hosts_path, "r+") as file: # r+ allows for the ability to read and append files
+              content = file.read() # this line is used to print content
+              for website in websites:
+                  if website in content:
+                      pass # skip to time.sleep(5)
+                  else:
+                      file.write(redirect+" "+website+"\n") # mapping the hostnames to the direct localhost IP address
+      else:
+          print("Unblocking Specified Websites") # printed output viewed in terminal displaying the unblocking method
+          with open(hosts_path, "r+") as file:
+              content = file.readlines() # returns a list containing each line in the file as a list item
+              file.seek(0)  # reset the pointer to the top of the text file and defaults to current position
+              for line in content:
+                  if not any(website in line for website in websites): # overwrites the whole file
+                      file.write(line) # this writes to an existing file and rewrites the content in the host file
+            </code>
+          </pre>         
+        </div>
+      </div>
+      <h2 class="mt-5">Step 1: Access Local Download File</h2>
+      <h6 style="color: white;">Within your device's native Terminal or CMD Prompt system, input this following line:</h6>
+      <div class="bg-gradient2 p-5 rounded-5 mt-5">
+        <div class="container p-5 rounded-5 bg-dark" >
+          <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2"><button class="w-100 btn-primary btn" data-for="2" onclick="copy(this)">Copy</button></div>
+          </div>
+<pre>
+  <code class="w-100 h-100 text-white bg-dark fs-6">
+$ cd Desktop
+  </code>
+</pre>
+                         
+        </div>
+      </div>
+      <h2 class="mt-5">Step 2: View Files Within System</h2>
+      <h6 style="color: white;">Typing the command below should output a list of files in your directory, you want to pick the downloaded file with the corresponding name 'websiteblocker.py'.</h6>
+      <div class="bg-gradient2 p-5 rounded-5 mt-5">
+      <div class="container p-5 rounded-5 bg-dark" >
+        <div class="row">
+          <div class="col-10"></div>
+          <div class="col-2"><button class="w-100 btn-primary btn" data-for="3" onclick="copy(this)">Copy</button></div>
+        </div>
+        <pre>
+          <code class="w-100 h-100 text-white bg-dark fs-6">
+$ ls
+          </code>
+        </pre>         
+      </div>
+      </div>
+      <h2 class="mt-5">Step 3: Executing File</h2>
+      <h6 style="color: white;">Using the root command 'sudo' for higher privilege access, use the command 'python3' to enable the script and the downloaded file to activate the code. It should output 'Blocking Specified Websites'.</h6>
+      <div class="bg-gradient2 p-5 rounded-5 mt-5">
+        <div class="container p-5 rounded-5 bg-dark" >
+          <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2"><button class="w-100 btn-primary btn" data-for="4" onclick="copy(this)">Copy</button></div>
+          </div>
+          <pre>
+             <code class="w-100 h-100 text-white bg-dark fs-6">
+$ sudo python3 website_blocker.py
+             </code>
+          </pre>            
+        </div>
+      </div>
+
+      <h1 class="mt-5">Unblocking Specified Websites</h1>
+      <hr>
+      <h2 class="">Step 1</h2>
+      <h6 style="color: white;">To unblock websites, first open the python file and locate this line of code:</h6>
+      <div class="bg-gradient2 p-5 rounded-5 mt-5">
+        <div class="container p-5 rounded-5 bg-dark" >
+          <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2"><button class="w-100 btn-primary btn" data-for="4" onclick="copy(this)">Copy</button></div>
+          </div>
+                    <pre>
+            <code class="w-100 h-100 text-white bg-dark fs-6">
+if dt(dt.now().year, dt.now().month, dt.now().day,16) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day,8):
+            </code>
+          </pre>            
+        </div>
+      </div>
+
+      <h2 class="mt-5">Step 2</h2>
+      <h6 style="color: white;">Next, switch the corresponding digits in this line being 16 & 8, giving this output:</h6>
+      <div class="bg-gradient2 p-5 rounded-5 mt-5">
+        <div class="container p-5 rounded-5 bg-dark" >
+          <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2"><button class="w-100 btn-primary btn" data-for="4" onclick="copy(this)">Copy</button></div>
+          </div>
+          <pre>
+            <code class="w-100 h-100 text-white bg-dark fs-6">
+if dt(dt.now().year, dt.now().month, dt.now().day,8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day,16):
+            </code>
+          </pre>            
+        </div>
+      </div>
+
+      <h2 class="mt-5">Step 3</h2>
+      <h6 style="color: white;">Save the file and follow the same steps to execute it to unblock websites, it should give the output:</h6>
+      <div class="bg-gradient2 p-5 rounded-5 mt-5">
+        <div class="container p-5 rounded-5 bg-dark" >
+          <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2"><button class="w-100 btn-primary btn" data-for="4" onclick="copy(this)">Copy</button></div>
+          </div>
+          <textarea name="" id="4" class="w-100 h-100 text-white" disabled rows="4"  style="background-color: transparent; border: none; font-family: Menlo, Consolas, Monaco, monospace;">
+            Unblocking Specified Websites
+            Unblocking Specified Websites
+            Unblocking Specified Websites
+          </textarea>        
+        </div>
+      </div>
+
+      <h1 class="mt-5">Video Tutorial</h1>
+      <hr>
+      <h6 style="color: white;">This is an in-depth video example of how to access the code and how to execute the file within your device's Terminal or CMD Prompt System.</h6>
+      <div class="bg-gradient2 p-5 rounded-5 mt-5">
+        <video class="rounded-5" width="100%" height="100%" controls>
+          <source src="vid.mp4" type="video/mp4">
+          
+        Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+      </div>
+    
+    <div class="container mt-5">
+      <h2>Chrome Blocking Extensions</h2>
+      <hr>
+      <h6 style="color: white;">These are verified Google Chrome extensions only accessible through that application to block chosen gambling websites.</h6>
+      <div class="bg-gradient2 p-5 rounded-5 mt-5">
+        <div class=" p-5 rounded-5 bg-dark d-flex justify-content-center" >
+          <a href="https://chrome.google.com/webstore/detail/gambling-blocker-casinosa/eakokjhgkhhijjoiemldkiodpeliffod?hl=en" class="btn btn-primary px-5 py-2 mt-3  mx-2 rounded-pill">Gambling Blocker</a>   
+          <a href="https://chrome.google.com/webstore/detail/gambling-time-monitor/enlbflgahcpbbjlfioblmbbmjeajmalf?hl=en" class="btn btn-primary px-5 py-2 mt-3  mx-2 rounded-pill">Gambling Time Monitor</a>                           
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script>
+      const file = new File([`
+import time
+from datetime import datetime as dt # utilising dt to refer the code easily
+
+hosts_path = "/etc/hosts" # set host according to user operating system
+redirect = "127.0.0.1" # redirect to the localhost's machine/IP - defaults to 127.0.0.1
+
+websites = ["www.sportsbet.com.au", "sportsbet.com.au"]     # list of websites blockable through modification
+
+while True:
+    if dt(dt.now().year, dt.now().month, dt.now().day,16) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day,8): # set time to dictate the period of time to block and unblock websites
+        print("Blocking Specified Websites") # printed output viewed in terminal displaying the blocking method
+        with open(hosts_path, "r+") as file: # r+ allows for the ability to read and append files
+            content = file.read() # this line is used to print content
+            for website in websites:
+                if website in content:
+                    pass # skip to time.sleep(5)
+                else:
+                    file.write(redirect+" "+website + "\\n") # mapping the hostnames to the direct localhost IP address
+    else:
+        print("Unblocking Specified Websites") # printed output viewed in terminal displaying the unblocking method
+        with open(hosts_path, "r+") as file:
+            content = file.readlines() # returns a list containgin each line in the file as a list item
+            file.seek(0)  # reset the pointer to the top of the text file and defaults to current position
+            for line in content:
+                if not any(website in line for website in websites): # overwrites the whole file
+                    file.write(line) # this writes to an existing file and rewrites the content in the host file
+                 
+      
+      
+      `], 'website_blocker.py', {
+        type: 'text/plain',
+      })
+
+      function copy(x){
+        id = x.dataset.for
+        console.log(id)
+        field = document.getElementById(id)
+        
+        console.log(field.innerHTML)
+        navigator.clipboard.writeText(field.innerHTML);
+        x.innerHTML = "Copied"
+      }
+
+      function download(x){
+        const link = document.createElement('a')
+        const url = URL.createObjectURL(file)
+
+        link.href = url
+        link.download = file.name
+        document.body.appendChild(link)
+        link.click()
+
+        document.body.removeChild(link)
+        window.URL.revokeObjectURL(url)
+        x.innerHTML = "Downloaded"
+      }
+    </script>
+    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        hljs.initHighlightingOnLoad();
+      });
+    </script>
+  </body>
+</html>
+

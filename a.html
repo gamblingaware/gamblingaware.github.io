@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://yandex.st/highlightjs/8.0/styles/vs.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre><code>
+import time
+from datetime import datetime as dt # utilising dt to refer the code easily
+
+hosts_path = "/etc/hosts" # set host according to user operating system
+redirect = "127.0.0.1" # redirect to the localhost's machine/IP - defaults to 127.0.0.1
+
+websites = ["www.sportsbet.com.au", "sportsbet.com.au"]     # list of websites blockable through modification
+
+while True:
+    if dt(dt.now().year, dt.now().month, dt.now().day,16) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day,8): # set time to dictate the period of time to block and unblock websites
+        print("Blocking Specified Websites") # printed output viewed in terminal displaying the blocking method
+        with open(hosts_path, "r+") as file: # r+ allows for the ability to read and append files
+            content = file.read() # this line is used to print content
+            for website in websites:
+                if website in content:
+                    pass # skip to time.sleep(5)
+                else:
+                    file.write(redirect+" "+website + "\\n") # mapping the hostnames to the direct localhost IP address
+    else:
+        print("Unblocking Specified Websites") # printed output viewed in terminal displaying the unblocking method
+        with open(hosts_path, "r+") as file:
+            content = file.readlines() # returns a list containgin each line in the file as a list item
+            file.seek(0)  # reset the pointer to the top of the text file and defaults to current position
+            for line in content:
+                if not any(website in line for website in websites): # overwrites the whole file
+                    file.write(line) # this writes to an existing file and rewrites the content in the host file
+
+</code></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        hljs.initHighlightingOnLoad();
+      });
+    </script>
+  </body>
+</html>
